@@ -61,3 +61,15 @@
   padding: 0 10px;
   height: 100%;
 }
+
+
+/*---------------Footer-----------------------*/
+#footer{
+  height: 60px;
+  /*background-color: #f5f5f5;*/
+  background-color: #efefef;
+}
+#footer p{
+  margin-top: 15px;
+  text-align: center;
+}
