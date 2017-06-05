@@ -15,37 +15,44 @@
       });
  </script>
 <!-- Top Page Slider Setting -------------------------------------------------------------------->
+
 <div class="container">
   <div class="row">
     <h2>Check Other Items</h2>
     <ul class="bxslider">
       <li>
-        <div class="col-md-12 col-sm-12 product-box">
+        <div class="col-md-12 col-sm-12 cart-product-box">
+          <a href="page.php">
           <img src="images/1.gif" alt="" style="max-width:100%;">
+          </a>
           <p>dddddddd</p>
           <p class="l">Rs.600</p>
           <p class="r">#Accessories</p>
         </div>
       </li>
       <li>
-        <div class="col-md-12 col-sm-12 product-box">
+        <div class="col-md-12 col-sm-12 cart-product-box">
+          <a href="page.php">
           <img src="images/1.gif" alt="" style="max-width:100%;">
+          </a>
           <p>dddddddd</p>
           <p class="l">Rs.600</p>
           <p class="r">#Accessories</p>
         </div>
-      </li>
-      <li>
-        <div class="col-md-12 col-sm-12 product-box">
+      </li><li>
+        <div class="col-md-12 col-sm-12 cart-product-box">
+          <a href="page.php">
           <img src="images/1.gif" alt="" style="max-width:100%;">
+          </a>
           <p>dddddddd</p>
           <p class="l">Rs.600</p>
           <p class="r">#Accessories</p>
         </div>
-      </li>
-      <li>
-        <div class="col-md-12 col-sm-12 product-box">
+      </li><li>
+        <div class="col-md-12 col-sm-12 cart-product-box">
+          <a href="page.php">
           <img src="images/1.gif" alt="" style="max-width:100%;">
+          </a>
           <p>dddddddd</p>
           <p class="l">Rs.600</p>
           <p class="r">#Accessories</p>
