@@ -1,5 +1,6 @@
 <?php  include "header.php"; ?>
 
+<!-- Top Page Slider Setting -->
 <script type="text/javascript">
 $(document).ready(function(){
   $('.bxslider').bxSlider({
@@ -7,9 +8,6 @@ $(document).ready(function(){
     auto: true,
     speed: 1000,
   });
-// Top Page Slider Setting -------------------------------------------------------------------
- $('.item-box').click(function(){
- });
 });
 </script>
 
@@ -46,46 +44,104 @@ $(document).ready(function(){
       <p class="l">Rs.600</p>
       <p class="r">#Accessories</p>
     </div>
-
     <div class="col-md-2 col-sm-3 col-xs-6 product-box">
       <div class="img-product-box">
+        <a href="page.php">
         <div class="detail-product">
           <h4>BRAKET</h4>
           <span>nice!!</span>
           <p>DITAIL</p>
         </div>
+        </a>
       </div>
       <p>dddddddd</p>
       <p class="l">Rs.600</p>
       <p class="r">#Accessories</p>
     </div>
-
-
-    <div class="col-md-2 col-sm-6 product-box">
+    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
       <div class="img-product-box">
-      </div>
-      <div class="detail-product">
-        <h4>BRAKET</h4>
-        <span>nice!!</span>
-        <p>DITAIL</p>
+        <a href="page.php">
+        <div class="detail-product">
+          <h4>BRAKET</h4>
+          <span>nice!!</span>
+          <p>DITAIL</p>
+        </div>
+        </a>
       </div>
       <p>dddddddd</p>
       <p class="l">Rs.600</p>
       <p class="r">#Accessories</p>
     </div>
-    <div class="col-md-2 product-box">
-          ddddd
+    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
+      <div class="img-product-box">
+        <a href="page.php">
+        <div class="detail-product">
+          <h4>BRAKET</h4>
+          <span>nice!!</span>
+          <p>DITAIL</p>
+        </div>
+        </a>
+      </div>
+      <p>dddddddd</p>
+      <p class="l">Rs.600</p>
+      <p class="r">#Accessories</p>
     </div>
-    <div class="col-md-2 product-box">
-          ddddd
+    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
+      <div class="img-product-box">
+        <a href="page.php">
+        <div class="detail-product">
+          <h4>BRAKET</h4>
+          <span>nice!!</span>
+          <p>DITAIL</p>
+        </div>
+        </a>
+      </div>
+      <p>dddddddd</p>
+      <p class="l">Rs.600</p>
+      <p class="r">#Accessories</p>
     </div>
-    <div class="col-md-2 product-box">
-                  ddddd
+    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
+      <div class="img-product-box">
+        <a href="page.php">
+        <div class="detail-product">
+          <h4>BRAKET</h4>
+          <span>nice!!</span>
+          <p>DITAIL</p>
+        </div>
+        </a>
+      </div>
+      <p>dddddddd</p>
+      <p class="l">Rs.600</p>
+      <p class="r">#Accessories</p>
     </div>
-    <div class="col-md-2 product-box">
-                      ddddd
-                    </div>
-
+    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
+      <div class="img-product-box">
+        <a href="page.php">
+        <div class="detail-product">
+          <h4>BRAKET</h4>
+          <span>nice!!</span>
+          <p>DITAIL</p>
+        </div>
+        </a>
+      </div>
+      <p>dddddddd</p>
+      <p class="l">Rs.600</p>
+      <p class="r">#Accessories</p>
+    </div>
+    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
+      <div class="img-product-box">
+        <a href="page.php">
+        <div class="detail-product">
+          <h4>BRAKET</h4>
+          <span>nice!!</span>
+          <p>DITAIL</p>
+        </div>
+        </a>
+      </div>
+      <p>dddddddd</p>
+      <p class="l">Rs.600</p>
+      <p class="r">#Accessories</p>
+    </div>
   </div>
 </div>
 

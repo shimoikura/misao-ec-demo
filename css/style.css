@@ -46,6 +46,12 @@
   opacity: 0.5;
 }
 /*----------------Product-----------------------------*/
+.product-box p{
+  margin: 2px 0;
+}
+.product-box a{
+  color: #333;
+}
 .img-product{
     width: 100%;
 }
@@ -66,9 +72,6 @@
   position: absolute;
   display: none;
   background: rgba(255,255,255,0.5);
-}
-.product-box p{
-  margin: 2px 0;
 }
 .l{
   float: left;

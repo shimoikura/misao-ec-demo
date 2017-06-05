@@ -55,7 +55,7 @@
             <p>REGISTER</p>
           </li>
           <li>
-            <a href="index.php" style="color:#333; text-decoration:none">
+            <a href="cart.php" style="color:#333; text-decoration:none">
             <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
             <p>CART</p>
             </a>
