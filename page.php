@@ -2,10 +2,10 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-5 left-box">
+    <div class="col-sm-5 col-md-5 left-box">
       <img src="images/1.gif" alt="">
     </div>
-    <div class="col-md-7 right-box">
+    <div class="col-sm-7 col-md-7 right-box">
       <div class="clearfix">
         <h1>bed cover</h1>
         <p id="category"><span>#</span>Others</p>

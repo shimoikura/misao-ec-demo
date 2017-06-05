@@ -19,7 +19,7 @@
   </nav>
   <!--   Product      -->
   <div class="row">
-    <div class="col-md-2 col-sm-6 product-box">
+    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
       <div class="img-product-box">
         <div class="detail-product">
           <h4>BRAKET</h4>
@@ -32,7 +32,7 @@
       <p class="r">#Accessories</p>
     </div>
 
-    <div class="col-md-2 col-sm-6 product-box">
+    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
       <div class="img-product-box">
         <div class="detail-product">
           <h4>BRAKET</h4>

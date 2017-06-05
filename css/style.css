@@ -10,6 +10,7 @@
   background-image: url("../images/logo.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  margin-bottom: 0;
 }
 #header i{
   font-size: 15px;
