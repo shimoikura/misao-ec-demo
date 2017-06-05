@@ -18,18 +18,7 @@
      <!-- modal-registration.js -->
      <script src="js/modal-registration.js"></script>
      <!-- <link href="css/jquery.bxslider.css" rel="stylesheet" /> -->
-     <script type="text/javascript">
-     $(document).ready(function(){
-       $('.bxslider').bxSlider({
-         controls: false,
-         auto: true,
-         speed: 1000,
-       });
- // Top Page Slider Setting -------------------------------------------------------------------
-      $('.item-box').click(function(){
-      });
-    });
-    </script>
+
 
   </head>
   <body>

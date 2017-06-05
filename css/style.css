@@ -197,6 +197,9 @@
   width:100%;
 }
 /*----------------page------------------------*/
+#page-container{
+  margin-top: 30px;
+}
 .left-box img{
   max-width: 100%;
 }
@@ -212,6 +215,7 @@
   top: 0;
   border: 1px solid #333;
   padding: 4px;
+  font-size: 12px;
 }
 .right-box p{
   margin-top: 15px;

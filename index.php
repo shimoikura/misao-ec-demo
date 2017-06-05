@@ -1,5 +1,18 @@
 <?php  include "header.php"; ?>
 
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.bxslider').bxSlider({
+    controls: false,
+    auto: true,
+    speed: 1000,
+  });
+// Top Page Slider Setting -------------------------------------------------------------------
+ $('.item-box').click(function(){
+ });
+});
+</script>
+
 <div class="container" style="z-index:0;">
   <!-- top-img-box -->
   <div class="row top-img-box">
@@ -21,11 +34,13 @@
   <div class="row">
     <div class="col-md-2 col-sm-3 col-xs-6 product-box">
       <div class="img-product-box">
+        <a href="page.php">
         <div class="detail-product">
           <h4>BRAKET</h4>
           <span>nice!!</span>
           <p>DITAIL</p>
         </div>
+        </a>
       </div>
       <p>dddddddd</p>
       <p class="l">Rs.600</p>
@@ -85,4 +100,5 @@
     });
   });
 </script>
+
 <?php include "footer.php" ?>
