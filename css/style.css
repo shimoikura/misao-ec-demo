@@ -3,65 +3,196 @@
   padding: 0;
 }
 /*-------------HEADER------------------*/
-.header{
-  height: 65px;
+#header{
+  height: auto;
   background-color: #efefef;
+  /*background-color: white;*/
+
 }
-.header i{
+#header i{
   font-size: 15px;
   margin: 15px auto 5px auto;
   display: block;
   text-align: center;
 }
-.header p{
+#header li{
   text-align: center;
-  margin-bottom: 0;
+  margin: 0 10px;
 }
-.header-left{
+#header a{
   padding: 0;
+  color: #333;
 }
-.home-box{
-  float: left;
-  height: 100%;
-  padding: 0 10px;
-}
-.home-box:hover{
-  background-color: blue;
-}
-.item-box{
-  float: left;
-  padding: 0 10px;
-  height: 100%;
-}
-.item-box:hover{
-  background-color: green;
-  cursor: pointer;
-}
-.header-title-logobox img{
-  width: 200px;
-  margin: 10px auto;
-  display: block;
-}
+/*--------------top-img-box-----------------*/
 
-.header-right{
-  padding: 0;
+/*--------------Navbar-------------------------*/
+.navbar{
+    float: none; /*　固定を外す*/
+    margin-top: 10px;
+    background-color: white;
+    border: none;
+    height: 30px;
 }
-.register-box{
-  float: right;
-  padding: 0 10px;
+.nav li a{
+  color: #9d9d9d;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.nav li:hover {
+  background-color: lime;
+  opacity: 0.5;
+}
+/*----------------Product-----------------------------*/
+.img-product{
+    width: 100%;
+}
+.img-product-box{
+  background: url("../images/1.gif") 0 0 no-repeat;
+  background-size: contain;
+    /* 表示画像の高さ ÷ 表示画像の幅 × 100 */
+  padding-top: 100%;
+  position: relative;
+  overflow:hidden;
+}
+.detail-product{
+  text-align: center;
+  width: 100%;
   height: 100%;
+  padding-top: 40px;
+  top: 0;
+  position: absolute;
+  display: none;
+  background: rgba(255,255,255,0.5);
 }
-.login-box{
+.product-box p{
+  margin: 2px 0;
+}
+.l{
+  float: left;
+  padding-top: 0;
+}
+.r{
   float: right;
-  padding: 0 10px;
-  height: 100%;
+  border: solid 1px;
+  padding:  2px;
+  margin: 0;
 }
-.cart-box{
-  float: right;
-  padding: 0 10px;
-  height: 100%;
+/*----------------modal-login--------------------------*/
+#modal-login-content{
+  width: 35%;
+  margin:1.5em auto 0;
+	padding:10px 20px;
+  border:2px solid #aaa;
+  background:#fff;
+	z-index:2;
+  position:fixed;
+  display: none;
 }
-
+#modal-login-overlay{
+	z-index:1;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:120%;
+	background-color:rgba(0,0,0,0.75);
+}
+.form-signin {
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin h2{
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 14px;
+  width: 100%;
+  background: orange;
+  font-weight: bold;
+}
+.form-signin label{
+  font-size: 12px;
+}
+.form-signin input[type="text"],
+.form-signin input[type="password"]{
+  width: 100%;
+  height: auto;
+  padding: 6px 10px;
+  border-radius: 0.5em;
+  border: 0.7px solid #bfbfbf;
+}
+.form-signin input[type="text"]:focus,
+.form-signin input[type="password"]:focus {
+  border:solid 1px #428bca; /*  blue */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #428bca;
+  outline: 0 none;
+}
+/*----------------modal-registration----------------------*/
+#modal-registration-content{
+  width: 35%;
+  margin:1.5em auto 0;
+	padding:10px 20px;
+  border:2px solid #aaa;
+  background:#fff;
+	z-index:2;
+  position:fixed;
+  display: none;
+}
+#modal-registration-overlay{
+	z-index:1;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:120%;
+	background-color:rgba(0,0,0,0.75);
+}
+.form-signin {
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-registration h2{
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 14px;
+  width: 100%;
+  background: orange;
+  font-weight: bold;
+}
+.form-registration label{
+  font-size: 12px;
+}
+.form-registration input[type="text"],
+.form-registration input[type="password"]{
+  width: 100%;
+  height: auto;
+  padding: 6px 10px;
+  border-radius: 0.5em;
+  border: 0.7px solid #bfbfbf;
+}
+.form-registration input[type="text"]:focus,
+.form-registration input[type="password"]:focus {
+  border:solid 1px #428bca; /*  blue */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #428bca;
+  outline: 0 none;
+}
+/*--------------- top-img-box --------------------------*/
+   /*bxsliderの余白なくすため*/
+.top-img-box li{
+  width: 1500px;
+}
+.top-img-box img{
+  width:100%;
+}
 
 /*---------------Footer-----------------------*/
 #footer{
