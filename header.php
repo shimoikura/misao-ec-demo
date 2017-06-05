@@ -57,11 +57,6 @@
                 </ul>
               </li>
         </ul>
-
-        <div class="navbar-header" id="brand-box" style="position: fixed; left:550px;">
-          <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
-        </div>
-
         <ul class="nav navbar-nav navbar-right">
           <li id="modal-login-open">
             <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
