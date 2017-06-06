@@ -11,6 +11,7 @@
   $data1 = mysqli_fetch_array($run1);
   $categoryId = $data1['categoryId'];
 
+// Return cateName
   function category($a){
     global $conn;
     $query2 = "select * from category where id=$a";

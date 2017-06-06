@@ -27,19 +27,36 @@
         <h1>bed cover</h1>
         <p id="category"><span>#</span>Others</p>
       </div>
-      <p>Rs <span id="totalprice">3000</span></p>
+      <p>Rs <span id="subprice">3000</span></p>
       <form id="cart_add_page" action="" method="post">
         <div class="amount col-md-6">
           <label for="">Quantity:</label>
-          <select class="" name="item_amount">
-            <option value="0">0</option>
+          <select id="sub-num" name="item_amount">
+            <?php
+            for ($i=0; $i <= 10; $i++) {
+              echo "<option value='" .$i. "'>" .$i. "</option>";
+            }
+             ?>
           </select>
         </div>
         <div class="subtotal col-md-6">
-          <p>Sub total: Rs <span id="subprice">600</span></p>
+          <p>Sub total: Rs <span id="totalprice">0</span></p>
         </div>
         <input type="submit" name="addcart" value="Add to Cart">
       </form>
     </div>
   </div>
 </div>
+
+<!-- calcurate subprice -->
+<script>
+  $(document).ready(function(){
+    $("#sub-num").change(function(){
+      var unit_price = $("#subprice").text();
+      var pro_subnum = $("#sub-num").val();
+      var sub_total = unit_price * pro_subnum;
+      $("#totalprice").text(sub_total);
+    });
+  });
+</script>
+<?php include "footer.php" ?>
