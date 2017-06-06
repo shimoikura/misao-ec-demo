@@ -46,6 +46,9 @@
   opacity: 0.5;
 }
 /*----------------Product-----------------------------*/
+.product-box img{
+  width: 500px;
+}
 .product-box p{
   margin: 2px 0;
 }
@@ -56,10 +59,10 @@
     width: 100%;
 }
 .img-product-box{
-  background: url("../images/1.gif") 0 0 no-repeat;
+  /*background: url("../images/1.gif") 0 0 no-repeat;*/
   background-size: contain;
     /* 表示画像の高さ ÷ 表示画像の幅 × 100 */
-  padding-top: 100%;
+  /*padding-top: 100%;*/
   position: relative;
   overflow:hidden;
 }

@@ -11,8 +11,6 @@
   $data1 = mysqli_fetch_array($run1);
   $categoryId = $data1['categoryId'];
 
-  // print_r($data2);
-
   function category($a){
     global $conn;
     $query2 = "select * from category where id=$a";
@@ -51,133 +49,27 @@ $(document).ready(function(){
   </nav>
   <!--   Product      -->
   <div class="row">
-    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
 
       <?php
       while ($data1 = mysqli_fetch_array($run1)) {
-          echo "<img src='images/'".$data1. "['imgName']>";
+          echo "<div class='col-md-2 col-sm-3 col-xs-6 product-box'>";
+          echo "<div class='img-product-box'>
+                <img src='images/product-img/" .$data1['imgName']. "'>
+                  <a href='page.php'>
+                  <div class='detail-product'>
+                    <h4>" .$data1['proDiscription']. "</h4>
+                    <span>nice!!</span>
+                    <p>DITAIL</p>
+                  </div>
+                  </a>
+                </div>
+                <p>" .$data1['proName']. "</p>
+                <p class='l'>Rs." .$data1['proPrice']. "</p>
+                <p class='r'>#" .$proCategory = category($categoryId). "</p>
+              </div>";
       }
-
        ?>
 
-      <div class="img-product-box">
-        <a href="page.php">
-        <div class="detail-product">
-          <h4><?php echo $data1['proName'] ?></h4>
-          <span>nice!!</span>
-          <p>DITAIL</p>
-        </div>
-        </a>
-      </div>
-      <p><?php echo $data1['proDiscription'] ?></p>
-      <p class="l">Rs.<?php echo $data1['proPrice'] ?></p>
-      <p class="r">#<?php echo $proCategory = category($categoryId); ?></p>
-
-
-    </div>
-
-
-
-
-
-    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
-      <div class="img-product-box">
-        <a href="page.php">
-        <div class="detail-product">
-          <h4>BRAKET</h4>
-          <span>nice!!</span>
-          <p>DITAIL</p>
-        </div>
-        </a>
-      </div>
-      <p>dddddddd</p>
-      <p class="l">Rs.600</p>
-      <p class="r">#Accessories</p>
-    </div>
-    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
-      <div class="img-product-box">
-        <a href="page.php">
-        <div class="detail-product">
-          <h4>BRAKET</h4>
-          <span>nice!!</span>
-          <p>DITAIL</p>
-        </div>
-        </a>
-      </div>
-      <p>dddddddd</p>
-      <p class="l">Rs.600</p>
-      <p class="r">#Accessories</p>
-    </div>
-    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
-      <div class="img-product-box">
-        <a href="page.php">
-        <div class="detail-product">
-          <h4>BRAKET</h4>
-          <span>nice!!</span>
-          <p>DITAIL</p>
-        </div>
-        </a>
-      </div>
-      <p>dddddddd</p>
-      <p class="l">Rs.600</p>
-      <p class="r">#Accessories</p>
-    </div>
-    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
-      <div class="img-product-box">
-        <a href="page.php">
-        <div class="detail-product">
-          <h4>BRAKET</h4>
-          <span>nice!!</span>
-          <p>DITAIL</p>
-        </div>
-        </a>
-      </div>
-      <p>dddddddd</p>
-      <p class="l">Rs.600</p>
-      <p class="r">#Accessories</p>
-    </div>
-    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
-      <div class="img-product-box">
-        <a href="page.php">
-        <div class="detail-product">
-          <h4>BRAKET</h4>
-          <span>nice!!</span>
-          <p>DITAIL</p>
-        </div>
-        </a>
-      </div>
-      <p>dddddddd</p>
-      <p class="l">Rs.600</p>
-      <p class="r">#Accessories</p>
-    </div>
-    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
-      <div class="img-product-box">
-        <a href="page.php">
-        <div class="detail-product">
-          <h4>BRAKET</h4>
-          <span>nice!!</span>
-          <p>DITAIL</p>
-        </div>
-        </a>
-      </div>
-      <p>dddddddd</p>
-      <p class="l">Rs.600</p>
-      <p class="r">#Accessories</p>
-    </div>
-    <div class="col-md-2 col-sm-3 col-xs-6 product-box">
-      <div class="img-product-box">
-        <a href="page.php">
-        <div class="detail-product">
-          <h4>BRAKET</h4>
-          <span>nice!!</span>
-          <p>DITAIL</p>
-        </div>
-        </a>
-      </div>
-      <p>dddddddd</p>
-      <p class="l">Rs.600</p>
-      <p class="r">#Accessories</p>
-    </div>
   </div>
 </div>
 

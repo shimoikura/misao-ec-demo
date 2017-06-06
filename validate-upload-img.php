@@ -16,16 +16,16 @@ function checkImg($image){
     if($size < 1000000){
       // echo "The size is also OK.<br>";
     //Check exist or not ---------------------------------------------------
-      if (file_exists('images/'.$imgname)) {
+      if (file_exists('productImg'.$imgname)) {
         $rand = rand(0,99999);  //make random
         //Upload
-        $upload = move_uploaded_file($tmp_name,"images/product-img".$rand."_".$imgname);
+        $upload = move_uploaded_file($tmp_name,"images/product-img/".$rand."_".$imgname);
         return "true";
       }
     // --------------------------------------------------------------------------
       else {
         //Upload
-        $upload = move_uploaded_file($tmp_name,"images/".$imgname);
+        $upload = move_uploaded_file($tmp_name,"images/product-img/".$imgname);
         if ($upload) {
           return "true";
         }
