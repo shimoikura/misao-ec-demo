@@ -9,6 +9,6 @@
   $query = "insert into category(id,cateName)values('','$cate_name')";
   $run = mysqli_query($conn,$query);
   if ($run) {
-    echo "succcess!";
+    echo "Created ". $cate_name ." category!";
   }
  ?>

@@ -1,3 +1,21 @@
+<?php
+  $severname = "localhost";
+  $username = "root";
+  $password = "";
+  $conn = mysqli_connect($severname,$username,$password);
+  $db = mysqli_select_db($conn,"misao_ec_demo");
+
+  $query = "select * from category";
+  $run = mysqli_query($conn,$query);
+  $row = mysqli_num_rows($run);
+
+  // print_r($data);
+  // foreach ($data as $key => $value) {
+  //   echo $valu;
+  //   echo $data['cateName'];
+  // }
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,7 +48,14 @@
       <input type="text" name="discript">
       <input type="file" name="proimg">
       <select name="category">
-        <option value="1">hjjjhj</option>
+        <?php
+          if ($row > 0) {
+            while ($data = mysqli_fetch_array($run)) {
+              echo "<option value='".$data['id']."'>" .$data['cateName']. "</option>";
+
+            }
+          }
+         ?>
       </select>
 
       <input id="pro-btn" type="submit"  value="Register product">
