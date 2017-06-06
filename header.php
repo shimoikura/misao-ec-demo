@@ -82,6 +82,13 @@
         <span>or</span>
         <input class="btn btn-large btn-primary" type="submit" name="" value="Facebook">
       </form>
+      <table>
+        <tr>
+          <td><hr></td>
+          <td>Not member?</td>
+          <td><hr></td>
+        </tr>
+      </table>
       <button id="modal-registration-open2" class="btn btn-large btn-primary" type="button" name="button">Create your Acount</button>
     </div> <!-- /container -->
     <!-- <div id="modal-login-overlay"></div> -->
