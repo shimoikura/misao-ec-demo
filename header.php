@@ -8,6 +8,7 @@
     <title>MISAO-EC.com</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link href="css/jquery.bxslider.css" rel="stylesheet" /> -->
     <link href="css/jquery.bxslider.min.css" rel="stylesheet" />
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -17,8 +18,8 @@
      <script src="js/modal-login.js"></script>
      <!-- modal-registration.js -->
      <script src="js/modal-registration.js"></script>
-     <!-- <link href="css/jquery.bxslider.css" rel="stylesheet" /> -->
-
+     <!-- logout.js -->
+     <script src="js/logout.js"></script>
 
   </head>
   <body>
@@ -45,17 +46,20 @@
                 </ul>
               </li>
         </ul>
-        <?php
-          if (! isset($_SESSION['login_user'])) {
-            $_SESSION['login_user'] = "Guest";
-          }
-         ?>
-         <p class="pull-right">hello <?php echo $_SESSION['login_user'] ?></p>
-
         <ul class="nav navbar-nav navbar-right">
-          <li id="modal-login-open">
-            <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
-            <p>LOGIN</p>
+          <?php
+            if (! isset($_SESSION['login_user'])) {
+              echo "<li id='modal-login-open'>
+              <i class='glyphicon glyphicon-user' aria-hidden='true'></i>
+              <p>LOGIN</p>";
+            }
+            else{
+              echo "<li id='modal-logout'>
+              <i class='glyphicon glyphicon-log-out' aria-hidden='true'></i>
+              <p>LOGOUT</p>
+              <p class='pull-right'>hello " .$_SESSION['login_user']. "</p>";
+            }
+           ?>
           </li>
           <li id="modal-registration-open">
             <i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i>
