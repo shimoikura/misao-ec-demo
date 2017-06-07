@@ -4,7 +4,7 @@ $severname = "localhost";
 $username = "root";
 $password = "";
 $conn = mysqli_connect($severname,$username,$password);
-$db = mysqli_select_db($conn,"misao_ec_demo");
+$db = mysqli_select_db($conn,"ec_demo");
 // 配列の中身を明示してくれる  (チェック用)
 // echo '<pre>';
 // var_dump($_POST);

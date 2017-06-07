@@ -3,7 +3,7 @@
   $username = "root";
   $password = "";
   $conn = mysqli_connect($severname,$username,$password);
-  $db = mysqli_select_db($conn,"misao_ec_demo");
+  $db = mysqli_select_db($conn,"ec_demo");
 
   $pro_name = $_POST['proname'];
   $pro_price = $_POST['proprice'];

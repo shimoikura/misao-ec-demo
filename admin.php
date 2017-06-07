@@ -3,7 +3,7 @@
   $username = "root";
   $password = "";
   $conn = mysqli_connect($severname,$username,$password);
-  $db = mysqli_select_db($conn,"misao_ec_demo");
+  $db = mysqli_select_db($conn,"ec_demo");
 
   $query = "select * from category";
   $run = mysqli_query($conn,$query);
