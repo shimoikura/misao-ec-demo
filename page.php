@@ -33,7 +33,7 @@
           <label for="">Quantity:</label>
           <select id="sub-num" name="item_amount">
             <?php
-            for ($i=0; $i <= 10; $i++) {
+            for ($i=1; $i <= 10; $i++) {
               echo "<option value='" .$i. "'>" .$i. "</option>";
             }
              ?>
@@ -51,8 +51,9 @@
 <!-- calcurate subprice -->
 <script>
   $(document).ready(function(){
+    var unit_price = $("#subprice").text();
+    $("#totalprice").text(unit_price);
     $("#sub-num").change(function(){
-      var unit_price = $("#subprice").text();
       var pro_subnum = $("#sub-num").val();
       var sub_total = unit_price * pro_subnum;
       $("#totalprice").text(sub_total);
