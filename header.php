@@ -45,6 +45,13 @@
                 </ul>
               </li>
         </ul>
+        <?php
+          if (! isset($_SESSION['login_user'])) {
+            $_SESSION['login_user'] = "Guest";
+          }
+         ?>
+         <p class="pull-right">hello <?php echo $_SESSION['login_user'] ?></p>
+
         <ul class="nav navbar-nav navbar-right">
           <li id="modal-login-open">
             <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
@@ -65,6 +72,7 @@
     </nav>
 
 
+<?php include "validate-login.php" ?>
 
 <!-- modal-login -->
     <div class="container" id="modal-login-content">
@@ -78,9 +86,9 @@
         <input type="password" class="input-block-level" placeholder="Password" name="password">
         <p></p>
         <p></p>
-        <input class="btn btn-large btn-success" type="submit" name="submit" value="Submit" style="background-color: #e4007b; background-image: none;"></input>
+        <input class="btn btn-large btn-success" type="submit" name="login" value="Login" style="background-color: #e4007b; background-image: none;"></input>
         <p id="login-or">or</p>
-        <input class="btn btn-large btn-primary" type="submit" name="" value="Facebook">
+        <input class="btn btn-large btn-primary" type="submit" name="login-f" value="Facebook">
       </form>
       <table>
         <tr>

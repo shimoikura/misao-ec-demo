@@ -4,12 +4,11 @@
   $username = "root";
   $password = "";
   $conn = mysqli_connect($severname,$username,$password);
-  $db = mysqli_select_db($conn,"misao_ec_demo");
+  $db = mysqli_select_db($conn,"ec_demo");
 
   $query1 = "select * from product";
   $run1 = mysqli_query($conn,$query1);
-  $data1 = mysqli_fetch_array($run1);
-  $categoryId = $data1['categoryId'];
+
 
 // Return cateName
   function category($a){
@@ -53,10 +52,13 @@ $(document).ready(function(){
 
       <?php
       while ($data1 = mysqli_fetch_array($run1)) {
+        $id = $data1['id'];
+        $categoryId = $data1['categoryId'];
+
           echo "<div class='col-md-2 col-sm-3 col-xs-6 product-box'>";
           echo "<div class='img-product-box'>
                 <img src='images/product-img/" .$data1['imgName']. "'>
-                  <a href='page.php'>
+                  <a href='page.php?id=$id'>
                   <div class='detail-product'>
                     <h4>" .$data1['proDiscription']. "</h4>
                     <span>nice!!</span>
