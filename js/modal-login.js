@@ -9,8 +9,8 @@ $(document).ready(function(){
     //コンテンツをセンタリングする
     centeringModalSyncer() ;
     $("#modal-login-content").fadeIn("slow");
-     //[#modal-login-overlay]、または[#modal-close]をクリックしたら…
-     $("#modal-login-content,#modal-login-overlay").unbind().click(function(){
+     //[#modal-login-overlay]をクリックしたら…
+     $("#modal-login-overlay").unbind().click(function(){
        //[#modal-login-content]と[#modal-login-overlay]をフェードアウトした後に…
        $("#modal-login-content,#modal-login-overlay").fadeOut("slow",function(){
          //[#modal-login-overlay]を削除する

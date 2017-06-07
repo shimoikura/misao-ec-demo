@@ -14,8 +14,8 @@ $(document).ready(function(){
        //コンテンツをセンタリングする
        centeringModalSyncer() ;
        $("#modal-registration-content").fadeIn("slow");
-        //[#modal-registration-overlay]、または[#modal-close]をクリックしたら…
-        $("#modal-registration-content,#modal-registration-overlay").unbind().click(function(){
+        //[#modal-registration-overlay]をクリックしたら…
+        $("#modal-registration-overlay").unbind().click(function(){
           //[#modal-registration-content]と[#modal-registration-overlay]をフェードアウトした後に…
           $("#modal-registration-content,#modal-registration-overlay").fadeOut("slow",function(){
             //[#modal-registration-overlay]を削除する
