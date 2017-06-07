@@ -47,6 +47,15 @@
               </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <li>
+            <p id="mes">
+              <?php if (! isset($_SESSION['login_user'])) {
+                echo "Hello! Guest!";
+              }else {
+                echo "Hello!".$_SESSION['login_user']. "!";
+              } ?>
+            </p>
+          </li>
           <?php
             if (! isset($_SESSION['login_user'])) {
               echo "<li id='modal-login-open'>
@@ -56,8 +65,7 @@
             else{
               echo "<li id='modal-logout'>
               <i class='glyphicon glyphicon-log-out' aria-hidden='true'></i>
-              <p>LOGOUT</p>
-              <p class='pull-right'>hello " .$_SESSION['login_user']. "</p>";
+              <p>LOGOUT</p>";
             }
            ?>
           </li>
