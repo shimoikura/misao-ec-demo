@@ -49,11 +49,10 @@
         <ul class="nav navbar-nav navbar-right">
           <li>
             <p id="mes">
-              <?php if (! isset($_SESSION['login_user'])) {
-                echo "Hello! Guest!";
-              }else {
+              <?php if ( isset($_SESSION['login_user'])) {
                 echo "Hello!".$_SESSION['login_user']. "!";
-              } ?>
+              }
+              ?>
             </p>
           </li>
           <?php

@@ -18,6 +18,10 @@
 
 <div class="container">
   <div class="row">
+    <div class="cart_total col-md-12 col-sm-12">
+      <p>Subtotal( 0items):Rs <span id="ttl-price">0</span></p>
+      <input type="button" class="btn green" value="Proceed to cheakout">
+    </div>
     <h2>Check Other Items</h2>
     <ul class="bxslider">
       <li>

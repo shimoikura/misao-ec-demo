@@ -9,7 +9,7 @@
   background-color: white;
   background-image: url("../images/logo.png");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 30%;
   margin-bottom: 0;
 }
 #header i{
@@ -25,6 +25,12 @@
 #header a{
   padding: 0;
   color: #333;
+}
+#mes{
+  color: #333;
+  line-height: 40px;
+  font-size: 20px;
+  padding-top: 20px;
 }
 /*--------------top-img-box-----------------*/
 
@@ -47,7 +53,10 @@
 }
 /*----------------Product-----------------------------*/
 .product-box img{
-  width: 500px;
+
+}
+.product-box{
+  margin: 20px;
 }
 .product-box p{
   margin: 2px 0;
@@ -61,6 +70,8 @@
 .img-product-box{
   /*background: url("../images/1.gif") 0 0 no-repeat;*/
   background-size: contain;
+  width: 200px;
+  height: 200px;
     /* 表示画像の高さ ÷ 表示画像の幅 × 100 */
   /*padding-top: 100%;*/
   position: relative;
@@ -145,6 +156,10 @@
 }
 #modal-registration-open2{
   width: 100%;
+}
+#login-or{
+  text-align: center;
+  margin: 10px auto;
 }
 /*----------------modal-registration----------------------*/
 #modal-registration-content{
@@ -247,6 +262,18 @@
   margin-top: 20px;
   border: none;
   background-color: orange;
+}
+/*---------------Cart.php-------------------------*/
+.cart_total{
+    background-color: #E3EFE3;
+    text-align: right;
+    padding: 5px 20px 10px;
+    font-weight: bold;
+    font-size: 180%;
+}
+.green{
+  background-color: #128807;
+  color: #FFF;
 }
 /*---------------Footer-----------------------*/
 #footer{
