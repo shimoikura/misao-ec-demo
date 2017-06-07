@@ -1,4 +1,29 @@
-<?php include "header.php" ?>
+<?php
+ include "header.php";
+
+$severname = "localhost";
+$username = "root";
+$password = "";
+$conn = mysqli_connect($severname,$username,$password);
+$db = mysqli_select_db($conn,"ec_demo");
+
+// Get id of displaying
+ $id = $_GET['id'];
+
+$query = "select * from product where id=$id";
+$run = mysqli_query($conn,$query);
+$data = mysqli_fetch_array($run);
+print_r($data);
+
+// Return cateName
+  function category($a){
+    global $conn;
+    $query2 = "select * from category where id=$a";
+    $run2 = mysqli_query($conn,$query2);
+    $data2 = mysqli_fetch_array($run2);
+    return $data2['cateName'];
+  }
+?>
 
 <!-- Top Page Slider Setting -------------------------------------------------------------------->
 <script type="text/javascript">
@@ -20,14 +45,14 @@
 <div class="container" id="page-container">
   <div class="row">
     <div class="col-sm-5 col-md-5 left-box">
-      <img src="images/1.gif" alt="">
+      <?php echo "<img src='images/product-img/".$data['imgName']."' >"; ?>
     </div>
     <div class="col-sm-7 col-md-7 right-box">
       <div class="clearfix">
         <h1>bed cover</h1>
-        <p id="category"><span>#</span>Others</p>
+        <p id="category"><span>#</span><?php echo $proCategory = category($data['categoryId']) ?></p>
       </div>
-      <p>Rs <span id="subprice">3000</span></p>
+      <p>Rs <span id="subprice"><?php echo $data['proPrice']; ?></span></p>
       <form id="cart_add_page" action="" method="post">
         <div class="amount col-md-6">
           <label for="">Quantity:</label>
