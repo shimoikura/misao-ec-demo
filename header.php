@@ -79,7 +79,7 @@
         <p></p>
         <p></p>
         <input class="btn btn-large btn-success" type="submit" name="submit" value="Submit" style="background-color: #e4007b; background-image: none;"></input>
-        <span>or</span>
+        <p id="login-or">or</p>
         <input class="btn btn-large btn-primary" type="submit" name="" value="Facebook">
       </form>
       <table>
@@ -93,6 +93,8 @@
     </div> <!-- /container -->
     <!-- <div id="modal-login-overlay"></div> -->
 
+
+<?php include "validate-registration.php" ?>
 
 <!-- modal-registration -->
 <div class="container" id="modal-registration-content">
@@ -127,13 +129,37 @@
         <td><input type="radio" name="gender" value="1">Male
         <input type="radio" name="gender" value="2">Female
       </td>
-      <td><input type="text" name="dob" value="" class="input-block-level" placeholder="ex.1938/01/04"></td>
+      <!-- <td><input type="text" name="dob" value="" class="input-block-level" placeholder="ex.1938/01/04"></td> -->
+      <td>
+        <select class="" name="day">
+          <?php for ($i=1; $i <= 31; $i++) {
+            echo "<option value='".$i."'>".$i."</option>";
+          }
+         ?>
+        </select>
+      </td>
+      <td>
+        <select class="" name="month">
+          <?php for ($i=1; $i <= 12; $i++) {
+            echo "<option value='".$i."'>".$i."</option>";
+          }
+         ?>
+        </select>
+      </td>
+      <td>
+        <select class="" name="year">
+          <?php for ($i=1900; $i <= 2017; $i++) {
+            echo "<option value='".$i."'>".$i."</option>";
+          }
+         ?>
+        </select>
+      </td>
       </tr>
       <tr>
-        <td><label for="img">Image</label></td>
+        <td><label for="user-img">Image</label></td>
       </tr>
       <tr>
-        <td><input type="file" name="img" value=""></td>
+        <td><input type="file" name="userimg" value=""></td>
       </tr>
       <tr>
         <td><input id="registration-button" class="btn btn-large btn-success" type="submit" name="register" value="Submit"></input></td>
