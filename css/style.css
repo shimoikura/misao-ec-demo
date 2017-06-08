@@ -263,6 +263,45 @@
   border: none;
   background-color: orange;
 }
+/*---------------cart-add.php----------------------*/
+#cart-add{
+  margin-top: 40px;
+  border: 2px solid #efefef;
+  padding: 10px;
+}
+.cart-subtotal-box{
+  margin-top: 20px;
+}
+#cart-add img{
+  width:100px;
+  float: left;
+}
+#cart-add h2{
+  margin-left: 15px;
+  font-size: 14px;
+  float: left;
+}
+.dis_tc {
+    float: left;
+    line-height: 60px;
+    vertical-align: middle;
+    padding: 0 10px;
+    font-size: 120%;
+    font-weight: bold;
+    width: 10%;
+    color: #128807;
+}
+#cart-subtotal{
+  font-size: 28px;
+}
+.blue{
+  background-color: #428bca;
+  color: #fff;
+}
+.blue:hover{
+    color: #fff;
+    opacity: 0.8;
+}
 /*---------------Cart.php-------------------------*/
 .cart_total{
     background-color: #E3EFE3;
