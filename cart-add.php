@@ -8,8 +8,8 @@ $db = mysqli_select_db($conn,"ec_demo");
 
 // Get id of displaying
  $id = $_GET['id'];
- $price = $_POST['totalprice'];
- $pro_num = $_POST['item_amount'];
+ $_SESSION['price'] += $_POST['totalprice'];
+ $_SESSION['pro_num'] += $_POST['item_amount'];
  $query = "select * from product where id=$id";
  $run = mysqli_query($conn,$query);
  $data = mysqli_fetch_array($run);
@@ -24,11 +24,11 @@ $db = mysqli_select_db($conn,"ec_demo");
     </div>
 
     <div class="col-md-5 cart-subtotal-box">
-      <p id="cart-subtotal">Cart subtotal (<span style="font-weight:bold;"><?php echo $pro_num; ?></span>items) : <span style="color:">Rs <?php echo $price; ?></span></p>
+      <p id="cart-subtotal">Cart subtotal (<span style="font-weight:bold;"><?php echo $_SESSION['pro_num']; ?></span>items) : <span style="color:">Rs <?php echo $_SESSION['price']; ?></span></p>
     </div>
     <div class="col-md-3 cart-subtotal-box">
-      <input type="submit" class="btn green" name="" value="CART">
-      <input type="submit" class="btn blue" name="" value="CHECKOUT">
+      <a href="cart.php"><input type="button" class="btn green" value="CART"></a>
+      <a href="buy.php"><input type="button" class="btn blue"  value="CHECKOUT"></a>
     </div>
   </div>
 </div>

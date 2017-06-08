@@ -19,7 +19,7 @@
 <div class="container">
   <div class="row">
     <div class="cart_total col-md-12 col-sm-12">
-      <p>Subtotal( 0items):Rs <span id="ttl-price">0</span></p>
+      <p>Subtotal( <?php echo $_SESSION['pro_num']; ?>items):Rs <span id="ttl-price"><?php echo $_SESSION['price']; ?></span></p>
       <a href="buy.php"><input type="button" class="btn green" value="Proceed to cheakout"></a>
     </div>
     <h2>Check Other Items</h2>

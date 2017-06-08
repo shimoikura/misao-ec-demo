@@ -24,8 +24,8 @@ if (! isset($_POST['buy-submit'])) {
 }
 // step3
 else{
-  $gift = $_POST["gift"];
-  $query = "insert into ship_address(id,name,phone,address,email,delivery,payment,gift)values('','".$_SESSION['name']."','".$_SESSION['phone']."','".$_SESSION['address']."','".$_SESSION['email']."','".$_SESSION['deli']."','".$_SESSION['payment']."','$gift')";
+  $_SESSION['gift'] = $_POST["gift"];
+  $query = "insert into ship_address(id,name,phone,address,email,delivery,payment,gift)values('','".$_SESSION['name']."','".$_SESSION['phone']."','".$_SESSION['address']."','".$_SESSION['email']."','".$_SESSION['deli']."','".$_SESSION['payment']."','".$_SESSION['gift']."')";
 
   //fetch
   $query2 = "select * from ship_address where name= '".$_SESSION['name']."' and phone= '".$_SESSION['phone']."' ";
@@ -60,9 +60,12 @@ else{
         </tr>
         <tr>
           <th>Gift</th>
-          <td><?php echo $gift ; ?></td>
+          <td><?php echo $_SESSION['gift'] ; ?></td>
         </tr>
       </table>
+      <div class="dis_table">
+        <a href="buy_thanks.php"><input type="button" class="btn green" value="Next"></a>
+      </div>
     </div>
 
     <div class="col-md-7" id="order-price">
@@ -73,7 +76,7 @@ else{
           <th>Quantity</th>
         </tr>
         <tr>
-          <td colspan="3">Sub Total ( 0items ) : Rs 0</td>
+          <td colspan="3">Sub Total ( <?php echo $_SESSION['pro_num']; ?>items ) : Rs <?php echo $_SESSION['price']; ?></td>
         </tr>
       </table>
     </div>
