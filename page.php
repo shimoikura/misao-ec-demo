@@ -14,7 +14,6 @@ $query = "select * from product where id=$id";
 $run = mysqli_query($conn,$query);
 $data = mysqli_fetch_array($run);
 print_r($data);
-
 // Return cateName
   function category($a){
     global $conn;
@@ -53,7 +52,7 @@ print_r($data);
         <p id="category"><span>#</span><?php echo $proCategory = category($data['categoryId']) ?></p>
       </div>
       <p>Rs <span id="subprice"><?php echo $data['proPrice']; ?></span></p>
-      <form id="cart_add_page" action="" method="post">
+      <form id="cart_page" <?php echo "action='cart-add.php?id=" .$data['id']. "'"; ?> method="post">
         <div class="amount col-md-6">
           <label for="">Quantity:</label>
           <select id="sub-num" name="item_amount">
@@ -66,6 +65,7 @@ print_r($data);
         </div>
         <div class="subtotal col-md-6">
           <p>Sub total: Rs <span id="totalprice">0</span></p>
+          <input type="hidden" id="vvv" name="totalprice" >
         </div>
         <input type="submit" name="addcart" value="Add to Cart">
       </form>
@@ -77,10 +77,12 @@ print_r($data);
 <script>
   $(document).ready(function(){
     var unit_price = $("#subprice").text();
+    $("#vvv").val(unit_price);
     $("#totalprice").text(unit_price);
     $("#sub-num").change(function(){
       var pro_subnum = $("#sub-num").val();
       var sub_total = unit_price * pro_subnum;
+      $("#vvv").val(sub_total);
       $("#totalprice").text(sub_total);
     });
   });

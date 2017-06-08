@@ -25,18 +25,12 @@ if (! isset($_POST['buy-submit'])) {
 // step3
 else{
   $gift = $_POST["gift"];
-  // echo $_SESSION['payment'];
-  // insert
   $query = "insert into ship_address(id,name,phone,address,email,delivery,payment,gift)values('','".$_SESSION['name']."','".$_SESSION['phone']."','".$_SESSION['address']."','".$_SESSION['email']."','".$_SESSION['deli']."','".$_SESSION['payment']."','$gift')";
-// var_dump($query);exit;
-  // $run = mysqli_query($conn,$query);
+
   //fetch
   $query2 = "select * from ship_address where name= '".$_SESSION['name']."' and phone= '".$_SESSION['phone']."' ";
   $run2 = mysqli_query($conn,$query2);
   $data2 = mysqli_fetch_array($run2);
-
-// var_dump($query2);exit;
-  // print_r($data2);
 }
  ?>
 
