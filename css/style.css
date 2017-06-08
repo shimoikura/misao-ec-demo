@@ -275,6 +275,72 @@
   background-color: #128807;
   color: #FFF;
 }
+.green:hover{
+    color: #FFF;
+    opacity: 0.8;
+}
+/*---------------Buy.php-----------------------*/
+.step li{
+  position: relative;
+  display: table-cell;
+  border-top: 2px solid #CCC;
+  width: 20%;
+  text-align: center;
+  padding-top: 15px;
+}
+.form-group label{
+  display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group  input[type="text"],input[type="email"]{
+  width: 100%;
+  height: auto;
+  padding: 6px 10px;
+  border-radius: 0.5em;
+  border: 0.7px solid #bfbfbf;
+}
+.form-group input[type="text"]:focus,input[type="email"]:focus {
+  border:solid 1px #428bca; /*  blue */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #428bca;
+  outline: 0 none;
+}
+/*step2*/
+#step2{
+  display: none;
+}
+#step2 ul{
+  margin-bottom: 30px;
+}
+#step2 li{
+  display: inline-block;
+  margin-right: 10px;
+}
+.form-group input[type="radio"]{
+  margin-right: 5px;
+}
+/*step3*/
+#step3{
+  display: none;
+}
+#step3 li{
+  display: inline-block;
+  margin-right: 10px;
+}
+.form-group input[type="radio"]{
+  margin-right: 5px;
+}
+/*---------------buy-pass.php-----------------*/
+#order-confirm{
+  margin-top: 40px;
+}
+#order-price{
+  background-color: #E3EFE3;
+}
+#order-price td{
+  margin-right: 10px;
+}
 /*---------------Footer-----------------------*/
 #footer{
   height: 60px;

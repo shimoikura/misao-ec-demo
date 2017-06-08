@@ -20,6 +20,8 @@
      <script src="js/modal-registration.js"></script>
      <!-- logout.js -->
      <script src="js/logout.js"></script>
+     <!-- buy.js -->
+     <script src="js/buy.js"></script>
 
   </head>
   <body>
