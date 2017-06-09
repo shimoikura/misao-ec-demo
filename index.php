@@ -5,19 +5,6 @@
   $password = "";
   $conn = mysqli_connect($severname,$username,$password);
   $db = mysqli_select_db($conn,"ec_demo");
-
-  $query1 = "select * from product";
-  $run1 = mysqli_query($conn,$query1);
-
-
-// Return cateName
-  function category($a){
-    global $conn;
-    $query2 = "select * from category where id=$a";
-    $run2 = mysqli_query($conn,$query2);
-    $data2 = mysqli_fetch_array($run2);
-    return $data2['cateName'];
-  }
  ?>
 <!-- Top Page Slider Setting -->
 <script type="text/javascript">
@@ -39,19 +26,57 @@ $(document).ready(function(){
     </ul>
   </div>
 
+
+
   <!-- nav-bar -->
+  <?php
+    $query3 = "select * from category";
+    $run3 = mysqli_query($conn,$query3);
+  ?>
   <nav class="navbar navbar-inverse">
       <ul class="nav navbar-nav">
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
+        <li class="nav-cate" id="0"><a>All</a></li>
+        <?php
+        while ($data3 = mysqli_fetch_array($run3)) {
+          echo "<li class='nav-cate' id='".$data3['id']."'><a>".$data3['cateName']."</a></li>";
+        }
+         ?>
       </ul>
   </nav>
-  <!--   Product      -->
-  <div class="row">
+  <script>
+    $(document).ready(function(){
+      $(".nav-cate").click(function(){
+        var nav_cate = $(this).attr('id');
+        $.ajax({
+          url:"category-sort.php",
+          type:'post',
+          data:{cate:nav_cate},
+          success:function(a){
+            $('.bbb').html(a);
+          }
+        });
+      });
+    });
+  </script>
 
+
+<!--    Product -->
+<?php
+  // Return cateName
+  function category($a){
+    global $conn;
+    $query2 = "select * from category where id=$a";
+    $run2 = mysqli_query($conn,$query2);
+    $data2 = mysqli_fetch_array($run2);
+    return $data2['cateName'];
+  }
+ ?>
+
+  <div class="row bbb">
       <?php
-      while ($data1 = mysqli_fetch_array($run1)) {
+      $query1 = "select * from product";
+      $run1 = mysqli_query($conn,$query1);
+      while ($data1 = mysqli_fetch_array($run1)){
         $id = $data1['id'];
         $categoryId = $data1['categoryId'];
 
