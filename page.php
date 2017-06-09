@@ -13,7 +13,6 @@ $db = mysqli_select_db($conn,"ec_demo");
 $query = "select * from product where id=$id";
 $run = mysqli_query($conn,$query);
 $data = mysqli_fetch_array($run);
-print_r($data);
 // Return cateName
   function category($a){
     global $conn;
