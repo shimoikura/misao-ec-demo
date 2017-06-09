@@ -16,6 +16,21 @@
  </script>
 <!-- Top Page Slider Setting -------------------------------------------------------------------->
 
+
+<?php
+if (! isset($_SESSION['price'])) {
+  $_SESSION['price'] = 0;
+}
+else {
+  $_SESSION['price'];
+}
+if (! isset($_SESSION['pro_num'])) {
+  $_SESSION['pro_num'] = 0;
+}
+else {
+  $_SESSION['pro_num'];
+}
+ ?>
 <div class="container">
   <div class="row">
     <div class="cart_total col-md-12 col-sm-12">

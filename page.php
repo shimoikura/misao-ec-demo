@@ -51,7 +51,8 @@ print_r($data);
         <h1>bed cover</h1>
         <p id="category"><span>#</span><?php echo $proCategory = category($data['categoryId']) ?></p>
       </div>
-      <p>Rs <span id="subprice"><?php echo $data['proPrice']; ?></span></p>
+      <p>Rs <span
+         id="subprice"><?php echo $data['proPrice']; ?></span></p>
       <form id="cart_page" <?php echo "action='cart-add.php?id=" .$data['id']. "'"; ?> method="post">
         <div class="amount col-md-6">
           <label for="">Quantity:</label>

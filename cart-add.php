@@ -8,8 +8,18 @@ $db = mysqli_select_db($conn,"ec_demo");
 
 // Get id of displaying
  $id = $_GET['id'];
- $_SESSION['price'] += $_POST['totalprice'];
- $_SESSION['pro_num'] += $_POST['item_amount'];
+ if (! isset($_POST['totalprice'])) {
+   $_SESSION['price'] = 0;
+ }
+ else {
+   $_SESSION['price'] += $_POST['totalprice'];
+ }
+ if (! isset($_POST['item_amount'])) {
+   $_SESSION['pro_num'] = 0;
+ }
+ else {
+   $_SESSION['pro_num'] += $_POST['item_amount'];
+ }
  $query = "select * from product where id=$id";
  $run = mysqli_query($conn,$query);
  $data = mysqli_fetch_array($run);
