@@ -5,6 +5,8 @@ $(document).ready(function(){
     var phone = $("#buy-phone").val();
     var address = $("#buy-address").val();
     var email = $("#buy-email").val();
+    $(".step span").removeClass("cart-active");
+    $(".step span:eq(1)").addClass("cart-active");
     $.ajax({
       url:"buy-pass.php",
       type:"post",
@@ -20,6 +22,8 @@ $(document).ready(function(){
   $("#btn-step2").click(function(){
     var deli = $('input[name="deli"]:checked').val();
     var payment = $('input[name="payment"]:checked').val();
+    $(".step span").removeClass("cart-active");
+    $(".step span:eq(2)").addClass("cart-active");
     $.ajax({
       url:"buy-pass.php",
       type:"post",
@@ -30,18 +34,4 @@ $(document).ready(function(){
       }
     });
   });
-
-  // Step3
-  // $("#btn-step2").click(function(){
-  //   var gift = $('input[name="deli"]:checked').val();
-  //   $.ajax({
-  //     url:"buy-pass.php",
-  //     type:"post",
-  //     data:{deli:deli,payment:payment,type:2},
-  //     success:function(result){
-  //       $("#step2").css("display","none");
-  //       $("#step3").show();
-  //     }
-  //   });
-  // });
 });

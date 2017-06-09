@@ -319,13 +319,30 @@
     opacity: 0.8;
 }
 /*---------------Buy.php-----------------------*/
+#buy-box{
+  margin-top: 30px;
+}
 .step li{
-  position: relative;
   display: table-cell;
-  border-top: 2px solid #CCC;
   width: 20%;
-  text-align: center;
   padding-top: 15px;
+  text-align: center;
+}
+.cart-icon{
+  position:absolute;
+
+  top:6px;
+  font-size: 22px;
+  color: #ccc;
+}
+.cart-active{
+  color: #128807;
+}
+.step p{
+  padding-top: 20px;
+  padding-left: 20px;
+  border-top: 2px solid #CCC;
+  top: 10px;
 }
 .form-group label{
   display: inline-block;

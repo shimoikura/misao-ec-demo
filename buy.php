@@ -1,26 +1,30 @@
 <?php include "header.php" ?>
 
-<div class="container">
+<div class="container" id="buy-box">
   <div class="row">
     <div class="col-md-2 col-sm-2">
     </div>
     <div class="buy col-md-8 col-sm-8">
       <ul class="step">
         <li class="step1 active">
-          <span class="glyphicon glyphicon-shopping-cart"></span>
-          <!-- Adress -->
+          <span class="glyphicon glyphicon-shopping-cart cart-icon cart-active"></span>
+          <p>Adress</p>
         </li>
         <li class="step1">
-          <span class="glyphicon glyphicon-shopping-cart"></span>
+          <span class="glyphicon glyphicon-shopping-cart cart-icon"></span>
+          <p>	Deliverty & Payment	</p>
         </li>
         <li class="step1">
-          <span class="glyphicon glyphicon-shopping-cart"></span>
+          <span class="glyphicon glyphicon-shopping-cart cart-icon"></span>
+          <p>Gift</p>
         </li>
         <li class="step1">
-          <span class="glyphicon glyphicon-shopping-cart"></span>
+          <span class="glyphicon glyphicon-shopping-cart cart-icon"></span>
+          <p>Check</p>
         </li>
         <li class="step1">
-          <span class="glyphicon glyphicon-shopping-cart"></span>
+          <span class="glyphicon glyphicon-shopping-cart cart-icon" ></span>
+          <p>Complete Payment</p>
         </li>
       </ul>
       <!-- Step1 -->
