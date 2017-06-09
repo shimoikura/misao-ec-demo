@@ -34,19 +34,21 @@ $(document).ready(function(){
     $run3 = mysqli_query($conn,$query3);
   ?>
   <nav class="navbar navbar-inverse">
-      <ul class="nav navbar-nav">
-        <li class="nav-cate" id="0"><a>All</a></li>
+      <ul class="nav navbar-nav nav-cate">
+        <li class="active" id="0"><a>All</a></li>
         <?php
         while ($data3 = mysqli_fetch_array($run3)) {
-          echo "<li class='nav-cate' id='".$data3['id']."'><a>".$data3['cateName']."</a></li>";
+          echo "<li id='".$data3['id']."'><a>".$data3['cateName']."</a></li>";
         }
          ?>
       </ul>
   </nav>
   <script>
     $(document).ready(function(){
-      $(".nav-cate").click(function(){
+      $(".nav-cate li").click(function(){
         var nav_cate = $(this).attr('id');
+        $(".nav-cate li").removeClass("active");
+        $(this).addClass("active");
         $.ajax({
           url:"category-sort.php",
           type:'post',
