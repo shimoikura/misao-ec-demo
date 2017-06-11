@@ -84,7 +84,7 @@ $(document).ready(function(){
 
           echo "<div class='col-md-2 col-sm-3 col-xs-6 product-box'>";
           echo "<div class='img-product-box'>
-                <img src='images/product-img/" .$data1['imgName']. "'>
+                <img class='img-responsive' src='images/product-img/" .$data1['imgName']. "'>
                   <a href='page.php?id=$id'>
                   <div class='detail-product'>
                     <h4>" .$data1['proDiscription']. "</h4>
