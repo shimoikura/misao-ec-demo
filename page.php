@@ -67,7 +67,13 @@ $data = mysqli_fetch_array($run);
           <p>Sub total: Rs <span id="totalprice">0</span></p>
           <input type="hidden" id="vvv" name="totalprice" >
         </div>
-        <input type="submit" name="addcart" value="Add to Cart">
+        <input
+        <?php if (isset($_SESSION['login_user'])) {
+           echo " type='submit'";
+          }
+        else {
+          echo "id='modal-login-open2' type='button'";
+          } ?> name="addcart" value="Add to Cart">
       </form>
     </div>
   </div>

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $("#modal-login-open").click(function(){
+  $("#modal-login-open,#modal-login-open2").click(function(){
     //キーボード操作などにより、オーバーレイが多重起動するのを防止する
     $(this).blur() ; //ボタンからフォーカスを外す
     if($("#modal-login-overlay")[0]) return false ; //新しくモーダルウィンドウを起動しない
