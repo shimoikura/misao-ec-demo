@@ -6,6 +6,19 @@ $password = "";
 $conn = mysqli_connect($severname,$username,$password);
 $db = mysqli_select_db($conn,"ec_demo");
 
+if (! isset($_SESSION['price'])) {
+  $_SESSION['price'] = 0;
+}
+else {
+  $_SESSION['price'];
+}
+if (! isset($_SESSION['pro_num'])) {
+  $_SESSION['pro_num'] = 0;
+}
+else {
+  $_SESSION['pro_num'];
+}
+
 // Get id of displaying
  $id = $_GET['id'];
  if (! isset($_POST['totalprice'])) {
