@@ -38,7 +38,7 @@ if(isset($_POST['login']) && $_POST['login'] === "Login"){
     // If result matched $email and $password, table row must be 1 row
       if($count >= 1) {
         $_SESSION['login_user'] = $data["userName"];
-        // header("location: welcome.php");
+        header("Refresh:0");
       }else {
         echo "Your Login Name or Password is invalid";
         //  $error = "Your Login Name or Password is invalid";
