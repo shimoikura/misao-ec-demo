@@ -91,15 +91,16 @@
     <div class="container" id="modal-login-content">
       <form class="form-signin" action="" method="post">
         <h2 class="form-signin-heading">LOGIN</h2>
-        <label for="email">User Name</label><br>
-        <input type="text" class="input-block-level" placeholder="Email address" name="email">
-        <p></p>
-        <p></p>
+        <label for="email">Email</label><br>
+        <input id="log-email" type="text" class="input-block-level" placeholder="Email address" name="email">
+        <p id="false1"></p>
+        <p id="false2"></p>
         <label for="email">Password</label><br>
-        <input type="password" class="input-block-level" placeholder="Password" name="password">
-        <p></p>
-        <p></p>
-        <input class="btn btn-large btn-success" type="submit" name="login" value="Login" style="background-color: #e4007b; background-image: none;"></input>
+        <input type="password" id="log-pass" class="input-block-level" placeholder="Password" name="password">
+        <p id="false3"></p>
+        <p id="false4"></p>
+        <p id="false"></p>
+        <input class="btn btn-large btn-success" id="btn-login" type="button" name="login" value="Login" style="background-color: #e4007b; background-image: none;"></input>
         <p id="login-or">or</p>
         <input class="btn btn-large btn-primary" type="submit" name="login-f" value="Facebook">
       </form>

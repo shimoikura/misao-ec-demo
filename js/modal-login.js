@@ -1,4 +1,33 @@
 $(document).ready(function(){
+  $("#btn-login").click(function(){
+    var email = $("#log-email").val();
+    var password = $("#log-pass").val();
+
+    $.ajax({
+      url:"validate-login.php",
+      type:"post",
+      data:{email:email,password:password,data:1},
+      dataType: 'json',
+      cache: false,
+      success:function(result){
+        if (result['success'] == "true" ) {
+          $("#modal-login-content,#modal-login-overlay").fadeOut("slow",function(){
+            //[#modal-login-overlay]を削除する
+            $('#modal-login-overlay').remove();
+          });
+        }
+        else {
+          $('#false1').html(result['email1']);
+          $('#false2').html(result['email2']);
+          $('#false3').html(result['password1']);
+          $('#false4').html(result['password2']);
+          $('#false').html(result['false']);
+        }
+      }
+    });
+  });
+
+
   $("#modal-login-open,#modal-login-open2").click(function(){
     //キーボード操作などにより、オーバーレイが多重起動するのを防止する
     $(this).blur() ; //ボタンからフォーカスを外す

@@ -6,28 +6,39 @@ $username = "root";
 $password = "";
 $conn = mysqli_connect($severname,$username,$password);
 $db = mysqli_select_db($conn,"ec_demo");
+$errors = array('email1'=>"",'email2'=>"",'password1'=>"",'password2'=>"",'success'=>"",'false'=>"");
 
-// 配列の中身を明示してくれる
-// echo '<pre>';
-// var_dump($_POST);
-// echo '</pre>';
-//---------------------------
-$errors = array('email1'=>"",'email2'=>"",'password1'=>"",'password2'=>"");
 // isset関数は変数にNULL以外の値がセットされているかを調べる関数
-if(isset($_POST['login']) && $_POST['login'] === "Login"){
+if(isset($_POST['data'])){
   $email = $_POST['email'];
   $password = $_POST['password'];
   if(empty($email)){
     $errors['email1'] = "Enter the email";
+    if(empty($password)){
+      $errors['password1'] = "Enter the password";
+      echo json_encode($errors);
+    }
+    elseif (! preg_match("/^[a-z A-Z 0-9]+$/",$password)) {
+      $errors['password2'] = "Enter a valid password";
+      echo json_encode($errors);
+    }
+    else {
+      echo json_encode($errors);
+    }
   }
   elseif (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
     $errors['email2'] = "Enter a valid email";
-  }
-  if(empty($password)){
-    $errors['password1'] = "Enter the password";
-  }
-  elseif (! preg_match("/^[a-z A-Z 0-9]+$/",$password)) {
-    $errors['password2'] = "Enter a valid password";
+    if(empty($password)){
+      $errors['password1'] = "Enter the password";
+      echo json_encode($errors);
+    }
+    elseif (! preg_match("/^[a-z A-Z 0-9]+$/",$password)) {
+      $errors['password2'] = "Enter a valid password";
+      echo json_encode($errors);
+    }
+    else {
+      echo json_encode($errors);
+    }
   }
   else {
     // email and password sent from form
@@ -38,19 +49,16 @@ if(isset($_POST['login']) && $_POST['login'] === "Login"){
     // If result matched $email and $password, table row must be 1 row
       if($count >= 1) {
         $_SESSION['login_user'] = $data["userName"];
+        $errors['success'] = "true";
+        echo json_encode($errors);
         header("Refresh:0");
       }else {
-        echo "Your Login Name or Password is invalid";
-        //  $error = "Your Login Name or Password is invalid";
+        $errors['false'] = "Your Login Name or Password is invalid";
+        echo json_encode($errors);
       }
-    // 確認---------------------
-        // if($run){
-        //   echo "success";
-        // }
-        // else {
-        //   echo "error.";
-        // }
-    // ------------------------------------
   }
+}
+else {
+  echo "string";
 }
 ?>
