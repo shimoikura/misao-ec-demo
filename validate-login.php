@@ -1,5 +1,6 @@
 <?php
 // session_start();
+
 // setting to conect db and php
 $severname = "localhost";
 $username = "root";
@@ -10,6 +11,7 @@ $errors = array('email1'=>"",'email2'=>"",'password1'=>"",'password2'=>"",'succe
 
 // isset関数は変数にNULL以外の値がセットされているかを調べる関数
 if(isset($_POST['data'])){
+  session_start();
   $email = $_POST['email'];
   $password = $_POST['password'];
   if(empty($email)){
@@ -57,6 +59,9 @@ if(isset($_POST['data'])){
         echo json_encode($errors);
       }
   }
+}
+else {
+  header("location:index.php");
 }
 
 ?>

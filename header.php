@@ -85,8 +85,6 @@
     </nav>
 
 
-<?php include "validate-login.php" ?>
-
 <!-- modal-login -->
     <div class="container" id="modal-login-content">
       <form class="form-signin" action="" method="post">

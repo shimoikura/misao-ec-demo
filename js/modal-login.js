@@ -14,6 +14,7 @@ $(document).ready(function(){
           $("#modal-login-content,#modal-login-overlay").fadeOut("slow",function(){
             //[#modal-login-overlay]を削除する
             $('#modal-login-overlay').remove();
+            location.reload();
           });
         }
         else {
