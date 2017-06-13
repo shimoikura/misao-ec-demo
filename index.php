@@ -54,7 +54,7 @@ $(document).ready(function(){
           type:'post',
           data:{cate:nav_cate},
           success:function(a){
-            $('.bbb').html(a);
+            location.reload();
           }
         });
       });
@@ -76,14 +76,19 @@ $(document).ready(function(){
 
   <div class="row bbb">
       <?php
-      $query1 = "select * from product";
+      if (! isset($_SESSION['cate']) || ($_SESSION['cate'] == 0)) {
+        $query1 = "select * from product";
+      }
+      else{
+        $query1 = "select * from product where categoryId =" .$_SESSION['cate']."";
+      }
       $run1 = mysqli_query($conn,$query1);
       while ($data1 = mysqli_fetch_array($run1)){
         $id = $data1['id'];
         $categoryId = $data1['categoryId'];
 
-          echo "<div class='col-md-2 col-sm-3 col-xs-6 product-box'>";
-          echo "<div class='img-product-box'>
+          echo "<div class='col-md-2 col-sm-3 col-xs-6 product-box'>
+                <div class='img-product-box'>
                 <img class='img-responsive' src='images/product-img/" .$data1['imgName']. "'>
                   <a href='page.php?id=$id'>
                   <div class='detail-product'>
