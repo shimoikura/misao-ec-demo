@@ -124,10 +124,10 @@
     <h2 class="form-registration-heading">REGISTER</h2>
     <table>
       <tr>
-        <td><label for="name">User Name</label></td>
+        <td colspan="2"><label for="name">User Name</label></td>
       </tr>
       <tr>
-        <td><input type="text" name="name" class="input-block-level" placeholder="Name"></td>
+        <td colspan="2"><input type="text" name="name" class="input-block-level" placeholder="Name"></td>
       </tr>
       <tr>
         <td><label for="password">Password</label></td>
@@ -138,10 +138,10 @@
         <td><input type="password" name="check-password" value="" class="input-block-level" placeholder="Confirm password"></td>
       </tr>
       <tr>
-        <td><label for="email">Mail Adress</label></td>
+        <td colspan="2"><label for="email">Mail Adress</label></td>
       </tr>
       <tr>
-        <td><input type="text" name="email" value="" class="input-block-level" placeholder="Email"></td>
+        <td colspan="2"><input type="text" name="email" value="" class="input-block-level" placeholder="Email"></td>
       </tr>
       <tr>
         <td><label for="gender">Gender</label></td>
@@ -151,7 +151,6 @@
         <td><input type="radio" name="gender" value="1">Male
         <input type="radio" name="gender" value="2">Female
       </td>
-      <!-- <td><input type="text" name="dob" value="" class="input-block-level" placeholder="ex.1938/01/04"></td> -->
       <td>
         <select class="" name="day">
           <?php for ($i=1; $i <= 31; $i++) {
@@ -159,16 +158,12 @@
           }
          ?>
         </select>
-      </td>
-      <td>
         <select class="" name="month">
           <?php for ($i=1; $i <= 12; $i++) {
             echo "<option value='".$i."'>".$i."</option>";
           }
          ?>
         </select>
-      </td>
-      <td>
         <select class="" name="year">
           <?php for ($i=1900; $i <= 2017; $i++) {
             echo "<option value='".$i."'>".$i."</option>";
@@ -178,19 +173,19 @@
       </td>
       </tr>
       <tr>
-        <td><label for="user-img">Image</label></td>
+        <td colspan="2"><label for="user-img">Image</label></td>
       </tr>
       <tr>
-        <td><input type="file" name="userimg" value=""></td>
+        <td colspan="2"><input type="file" name="userimg" value=""></td>
       </tr>
       <tr>
-        <td><input id="registration-button" class="btn btn-large btn-success" type="submit" name="register" value="Submit"></input></td>
+        <td colspan="2"><input id="registration-button" class="btn btn-large btn-success" type="submit" name="register" value="Submit"></input></td>
       </tr>
       <tr>
-        <td><span>or</span></td>
+        <td colspan="2"  style="text-align:center;"><span>or</span></td>
       </tr>
       <tr>
-        <td><input id="facebok-registration-button" class="btn btn-large btn-primary" type="submit" name="facebok-register" value="Facebook"></input></td>
+        <td colspan="2"><input id="facebok-registration-button" class="btn btn-large btn-primary" type="submit" name="facebok-register" value="Facebook"></input></td>
       </tr>
     </table>
   </form>

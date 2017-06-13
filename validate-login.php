@@ -58,7 +58,5 @@ if(isset($_POST['data'])){
       }
   }
 }
-else {
-  echo "string";
-}
+
 ?>

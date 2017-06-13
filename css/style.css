@@ -150,8 +150,10 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #428bca;
   outline: 0 none;
 }
-.form-signin input[type="submit"]{
+.form-signin input[type="submit"],
+.form-signin input[type="button"]{
   width: 100%;
+  border: none;
 }
 #modal-registration-open2{
   width: 100%;
@@ -214,7 +216,10 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #428bca;
   outline: 0 none;
 }
-/*--------------- top-img-box --------------------------*/
+.form-registration input[type="submit"]{
+  width: 100%;
+  margin-top: 8px;
+  }/*--------------- top-img-box --------------------------*/
    /*bxsliderの余白なくすため*/
 .top-img-box li{
   width: 1500px;
