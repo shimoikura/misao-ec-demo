@@ -259,7 +259,8 @@
   margin: 0;
   border:none;
 }
-#cart_page input[type="submit"]{
+#cart_page input[type="submit"],
+#cart_page input[type="button"]{
   width: 100%;
   color: white;
   padding: 6px;
