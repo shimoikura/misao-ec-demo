@@ -35,10 +35,24 @@ $(document).ready(function(){
   ?>
   <nav class="navbar navbar-inverse">
       <ul class="nav navbar-nav nav-cate">
-        <li class="active" id="0"><a>All</a></li>
+        <li class=
+        <?php
+        if (! isset($_SESSION['cate']) || ($_SESSION['cate'] == 0)) {
+          echo "'active'";
+        }
+        else{
+          echo "''";
+        }
+        ?>
+          id='0'><a>All</a></li>
         <?php
         while ($data3 = mysqli_fetch_array($run3)) {
-          echo "<li id='".$data3['id']."'><a>".$data3['cateName']."</a></li>";
+          if (isset($_SESSION['cate']) && $_SESSION['cate'] == $data3['id']) {
+            echo "<li class='active' id='".$data3['id']."'><a>".$data3['cateName']."</a></li>";
+          }
+          else {
+            echo "<li id='".$data3['id']."'><a>".$data3['cateName']."</a></li>";
+          }
         }
          ?>
       </ul>
