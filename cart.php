@@ -24,19 +24,23 @@ if (! isset($_SESSION['price'])) {
 else {
   $_SESSION['price'];
 }
-if (! isset($_SESSION['pro_num'])) {
-  $_SESSION['pro_num'] = 0;
+if (! isset($_SESSION['cartnum'])) {
+  $_SESSION['cartnum'] = 0;
 }
 else {
-  $_SESSION['pro_num'];
+  $_SESSION['cartnum'];
 }
  ?>
 <div class="container">
   <div class="row">
+    <!-- 小計 -->
     <div class="cart_total col-md-12 col-sm-12">
-      <p>Subtotal( <?php echo $_SESSION['pro_num']; ?>items):Rs <span id="ttl-price"><?php echo $_SESSION['price']; ?></span></p>
+      <p>Subtotal( <?php echo $_SESSION['cartnum']; ?>items):Rs <span id="ttl-price"><?php echo $_SESSION['price']; ?></span></p>
       <a href="buy.php"><input type="button" class="btn green" value="Proceed to cheakout"></a>
     </div>
+
+
+
     <h2>Check Other Items</h2>
     <ul class="bxslider">
       <li>
