@@ -22,6 +22,8 @@
      <script src="js/logout.js"></script>
      <!-- buy.js -->
      <script src="js/buy.js"></script>
+     <!-- add-cart.js -->
+     <script src="js/add-cart.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -75,7 +77,16 @@
           </li>
           <li>
             <a href="cart.php" style="color:#333; text-decoration:none">
-            <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
+            <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true">
+              <?php
+              if (isset($_SESSION['cartnum'])) {
+                echo "<p id='cart-num'>".$_SESSION['cartnum']."</p>";
+              }
+              else {
+                echo "";
+              }
+               ?>
+             </i>
             <p>CART</p>
             </a>
           </li>
