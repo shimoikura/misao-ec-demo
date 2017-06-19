@@ -1,4 +1,11 @@
 <?php include "header.php" ?>
+<?php
+$severname = "localhost";
+$username = "root";
+$password = "";
+$conn = mysqli_connect($severname,$username,$password);
+$db = mysqli_select_db($conn,"ec_demo");
+ ?>
 <script type="text/javascript">
         $(document).ready(function(){
             $('.bxslider').bxSlider({
@@ -41,7 +48,37 @@ else {
 
 
 
-    <h2>Check Other Items</h2>
+<?php
+if (isset($_SESSION["i"])) {
+  for ($i=1; $i <= $_SESSION["i"]; $i++) {
+    if (isset($_SESSION["cartid_$i"])) {
+      // echo $_SESSION["cartid_$i"]."<br>";
+      $a = $_SESSION["cartid_$i"];
+      $query = "select * from product where id=$a";
+      $run = mysqli_query($conn,$query);
+      $data = mysqli_fetch_array($run);
+      // echo "<pre>";
+      // print_r($data);
+      echo "<div class='col-md-12 added-pro-box'>";
+      echo "<img style='width:50px;' src='images/product-img/";
+      echo $data['imgName'];
+      echo "'>";
+      echo "<h2>".$data['proName']."</h2>";
+      echo "</div>";
+    }
+    else {
+      // echo "nothing";
+    }
+  }
+}
+else {
+  # code...
+}
+
+ ?>
+
+
+    <!-- <h2>Check Other Items</h2>
     <ul class="bxslider">
       <li>
         <div class="col-md-12 col-sm-12 cart-product-box">
@@ -82,5 +119,5 @@ else {
         </div>
       </li>
     </ul>
-  </div><!-- /#slide_space -->
+  </div><! /#slide_space -->
 </div>

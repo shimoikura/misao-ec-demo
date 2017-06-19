@@ -47,7 +47,7 @@ $data = mysqli_fetch_array($run);
     </div>
     <div class="col-sm-7 col-md-7 right-box">
       <div class="clearfix">
-        <h1>bed cover</h1>
+        <h1><?php echo $data["proName"] ?></h1>
         <p id="category"><span>#</span><?php echo $proCategory = category($data['categoryId']) ?></p>
       </div>
       <p>Rs <span
@@ -67,13 +67,15 @@ $data = mysqli_fetch_array($run);
           <p>Sub total: Rs <span id="totalprice">0</span></p>
           <input type="hidden" id="vvv" name="totalprice" >
         </div>
+        <input type="hidden" id="cartid" name="cartid" value=<?php echo "'" .$data['id']. "'"; ?>>
         <input
         <?php if (isset($_SESSION['login_user'])) {
-           echo " type='submit'";
+          //  echo " type='submit' name='addcart'";
+          echo "id='btn-add-cart' type='button' name='addcart'";
           }
         else {
           echo "id='modal-login-open2' type='button'";
-          } ?> name="addcart" value="Add to Cart">
+          } ?>  value="Add to Cart">
       </form>
     </div>
   </div>

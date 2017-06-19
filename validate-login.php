@@ -51,6 +51,7 @@ if(isset($_POST['data'])){
     // If result matched $email and $password, table row must be 1 row
       if($count >= 1) {
         $_SESSION['login_user'] = $data["userName"];
+        $_SESSION['cart_num'] = 0; //cart内の商品数
         $errors['success'] = "true";
         echo json_encode($errors);
         header("Refresh:0");

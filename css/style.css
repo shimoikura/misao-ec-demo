@@ -337,6 +337,13 @@
     color: #FFF;
     opacity: 0.8;
 }
+.added-pro-box img{
+  float: left;
+}
+.added-pro-box h2{
+  float: left;
+  margin: 0 50px;
+}
 /*---------------Buy.php-----------------------*/
 #buy-box{
   margin-top: 30px;
