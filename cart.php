@@ -59,11 +59,20 @@ if (isset($_SESSION["i"])) {
       $data = mysqli_fetch_array($run);
       // echo "<pre>";
       // print_r($data);
-      echo "<div class='col-md-12 added-pro-box'>";
+      echo "<div class='col-md-12 added-pro-box'>
+      <hr>";
       echo "<img style='width:50px;' src='images/product-img/";
       echo $data['imgName'];
       echo "'>";
-      echo "<h2>".$data['proName']."</h2>";
+      echo "<h2>".$data['proName']."</h2>
+      <p>Rs ".$data['proPrice']."</p>
+      <a>Delete</a>
+      <select class='selectpicker'>
+        <option>Ketchup</option>
+        <option>Relish</option>
+        <option>Mustard</option>
+      </select>
+      ";
       echo "</div>";
     }
     else {
