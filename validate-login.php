@@ -2,11 +2,7 @@
 // session_start();
 
 // setting to conect db and php
-$severname = "localhost";
-$username = "root";
-$password = "";
-$conn = mysqli_connect($severname,$username,$password);
-$db = mysqli_select_db($conn,"ec_demo");
+include "db_connect.php"
 $errors = array('email1'=>"",'email2'=>"",'password1'=>"",'password2'=>"",'success'=>"",'false'=>"");
 
 // isset関数は変数にNULL以外の値がセットされているかを調べる関数

@@ -1,9 +1,5 @@
 <?php
-  $severname = "localhost";
-  $username = "root";
-  $password = "";
-  $conn = mysqli_connect($severname,$username,$password);
-  $db = mysqli_select_db($conn,"ec_demo");
+  include "db_connect.php"
 
   $pro_name = $_POST['proname'];
   $pro_price = $_POST['proprice'];

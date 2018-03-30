@@ -1,11 +1,8 @@
-<?php  include "header.php"; ?>
 <?php
-  $severname = "localhost";
-  $username = "root";
-  $password = "";
-  $conn = mysqli_connect($severname,$username,$password);
-  $db = mysqli_select_db($conn,"ec_demo");
+include "header.php";
+include "db_connect.php";
  ?>
+
 <!-- Top Page Slider Setting -->
 <script type="text/javascript">
 $(document).ready(function(){

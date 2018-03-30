@@ -1,10 +1,6 @@
 <?php
 // setting to conect db and php
-$severname = "localhost";
-$username = "root";
-$password = "";
-$conn = mysqli_connect($severname,$username,$password);
-$db = mysqli_select_db($conn,"ec_demo");
+include "db_connect.php"
 // 配列の中身を明示してくれる  (チェック用)
 // echo '<pre>';
 // var_dump($_POST);

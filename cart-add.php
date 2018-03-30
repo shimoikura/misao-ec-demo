@@ -1,10 +1,6 @@
 <?php include "header.php" ?>
 <?php
-$severname = "localhost";
-$username = "root";
-$password = "";
-$conn = mysqli_connect($severname,$username,$password);
-$db = mysqli_select_db($conn,"ec_demo");
+include "db_connect.php"
 if (isset($_POST["addcart"])) {
   if (! isset($_SESSION['price'])) {
     $_SESSION['price'] = 0;

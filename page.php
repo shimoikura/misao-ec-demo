@@ -1,12 +1,6 @@
 <?php
  include "header.php";
-
-$severname = "localhost";
-$username = "root";
-$password = "";
-$conn = mysqli_connect($severname,$username,$password);
-$db = mysqli_select_db($conn,"ec_demo");
-
+include "db_connect.php"
 // Get id of displaying
  $id = $_GET['id'];
 

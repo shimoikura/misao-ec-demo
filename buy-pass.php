@@ -1,10 +1,6 @@
 <?php
 include "header.php";
-$severname = "localhost";
-$username = "root";
-$password = "";
-$conn = mysqli_connect($severname,$username,$password);
-$db = mysqli_select_db($conn,"ec_demo");
+include "db_connect.php"
 
 if (! isset($_POST['buy-submit'])) {
   // common
@@ -64,7 +60,7 @@ else{
     </div>
   </div>
 
-  
+
 <div class="container" id="order-confirm">
   <div class="row">
     <div class="col-md-5">
